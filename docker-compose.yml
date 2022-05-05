@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  jhipster:
+    image: jhipster/jhipster:latest
+    container_name: jhipster
+    hostname: jhipster
+    restart: unless-stopped
+    volumes:
+        - ./jhipster:/home/jhipster/app
+    ports:
+        - "3001:3001"
+        - "9090:8080"
+        - "9000:9000"
